@@ -1,0 +1,14 @@
+services:
+  csnoserv:
+    container_name: csnoserv
+    environment:
+      - OLDJDK_JAVA_OPTIONS=--add-modules java.xml.bind
+    ports:
+      - "8080:8080"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+    image: at.erpapps.in/csnoserv
+    volumes:
+      - /home/railadmin/snomed:/home
