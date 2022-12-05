@@ -29,6 +29,10 @@ spec:
       labels:
         app: csnoservice
     spec:      
+      volumes:
+          - name: csnoservice-vol
+            persistentVolumeClaim:
+              claimName: csnoservice-pvc
       containers:        
       - name: csnoservice
         image: railtelhrit/csnoservice            
@@ -36,10 +40,6 @@ spec:
         - containerPort: 8080
           name: web
         imagePullPolicy: Always
-        volumes:
-          - name: csnoservice-vol
-            persistentVolumeClaim:
-              claimName: csnoservice-pvc
         resources:
           limits:
             memory: "4Gi"
