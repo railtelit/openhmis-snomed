@@ -6,7 +6,7 @@ spec:
   capacity:
     storage: 90Gi
   volumeMode: Filesystem
-  persistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Recycle
   accessModes:
     - ReadWriteOnce  
   storageClassName: manual
