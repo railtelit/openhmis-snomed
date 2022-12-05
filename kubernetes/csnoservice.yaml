@@ -30,7 +30,7 @@ spec:
     spec:
       volumes:
         - name: csnoservice-vol
-          PersistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: csnoservice-pvc
       containers:
       - name: csnoservice
