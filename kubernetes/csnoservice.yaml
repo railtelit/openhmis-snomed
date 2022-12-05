@@ -40,8 +40,8 @@ spec:
             name: csnoservice-vol                
         resources:
           limits:
-            memory: "1628Mi"
-            cpu: "1500m"
+            memory: "6Gi"
+            cpu: "2800m"
         ports:
         - containerPort: 8080
 
