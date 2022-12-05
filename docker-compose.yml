@@ -9,6 +9,6 @@ services:
       replicas: 1
       restart_policy:
         condition: any
-    image: at.erpapps.in/csnoserv
+    image: railtelhrit/csnoservice
     volumes:
       - /home/railadmin/snomed:/home
