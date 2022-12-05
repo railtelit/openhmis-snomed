@@ -28,10 +28,16 @@ spec:
       labels:
         app: csnoservice
     spec:
+      volumes:
+        - name: csnoservice-vol
+          PersistentVolumeClaim:
+            claimName: csnoservice-pvc
       containers:
       - name: csnoservice
         image: railtelhrit/csnoservice
-        
+        volumeMounts:
+          - mountPath: "/home"
+            name: csnoservice-vol                
         resources:
           limits:
             memory: "528Mi"
