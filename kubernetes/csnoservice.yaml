@@ -28,13 +28,14 @@ spec:
     metadata:
       labels:
         app: csnoservice
-    spec:
+    spec:      
       containers:        
       - name: csnoservice
-        image: railtelhrit/csnoservice
+        image: railtelhrit/csnoservice            
         ports:
         - containerPort: 8080
           name: web
+        imagePullPolicy: Always
         volumes:
           - name: csnoservice-vol
             persistentVolumeClaim:
